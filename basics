@@ -1,0 +1,76 @@
+---------------------------------------------------------------------------------------------------------------------------
+Data stored in sorted order :
+a) set b) multiset c) map d) multimap implemented using BST or RBTs.
+For quick search we use :
+a)unordered_set b) unordered_multiset c) unordered_map  d) unordered_multimap
+Search : auto it=find(v.begin(),v.end());   bool ans=binary_search(v.begin(),v.end());   
+auto it=lower_bound(arr,arr+n,ele);  //return &first_ele>=ele
+auto it=upper_bound(arr,arr+n,ele);  //return &first_ele>ele
+
+--------------------------------------------------------------------------------
+String class
+s.length();
+string s0("hel");
+string s="hel";
+char c[]={'w','d','f',t','\0'};
+string s(c);
+bool ans=s.isEmpty();    |   s.append("i am new"); or s=s+ele;  |   s.clear();  |   int x=s1.compare(s2); or s1>s2; //return >0 if s1>s2;    
+                         |   s.erase(index_start,len(ele));  
+for(auto ele: s)cout<<ele;    //for each loop    auto = data_type::it
+
+string arr[100];
+getline(cin,arr[i]);
+bool compare(string a,string b){your body}
+sort(arr,arr+n,compare);
+
+Tokenization in strings
+char *strtok(char *s,char *deimiter);
+//To print ele line by line in a string separated by space
+char *ptr=strtok(s," ");
+cout<<ptr<<endl;
+while(ptr!=NULL){
+char *ptr=strtok(NULL," ");
+cout<<ptr<<endl;}
+
+-----------------------------------------------------------------------------------------------------------------------------------------------
+Vector //grow and shrink in size    **2 times
+vector<int> v(size,every_ele_value);
+v.size();
+auto = vector<int> :: iterator;
+v.capacity(); //returns the doubled memory size
+v.insert(v.begin()+x,100);  //after x eles we get 100 in vector
+v.insert(v.begin()+x,4,100);   //after x eles we get 4 each with value 100 in vector
+v.erase(v.begin()+3) //erase the 3rd ele
+v.erase(v.begin()+3,v.begin()+5); //erase the 2 elements
+v.resize(19); //resize the array but capacity not change if the size<capacity and assign 0s to further eles
+v.clear();
+bool ans=v.empty();
+v.front();// first ele in vector
+v.back(); //last ele in vector
+***
+    to avoid doubling operations in push_back 
+    v.reserve(100); //until 100 eles are not inserted its capacity is reserved
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+Lists
+List is also called as  Doubly linked list ( insert ,delete from front or from middle)  //O(1) time
+list<int> l{"q","a"};
+l.sort(); | l.reverse(); | l.pop_front(); | l.pop_back(); | l.push_front(); | l.back() | l.front(); 
+l.remove(ele) // remove all occurences of ele in l 
+***
+    l.erase(l.begin()+3) //erase 3rd ele in list not works as its list not vector 
+    so to go to next ele use it++ 
+    l.erase(it);
+auto it=l.begin();
+l.insert(it,ele);
+--------------------------------------------------------------------------------------------------------------------------------------------------------------
+Stacks  (LIFO)
+stack<int> s;
+s.push(ele);   |  s.pop();   |   int ele=s.top();
+bool ans=s.empty();
+
+    
+
+
+
+
